@@ -1,6 +1,6 @@
 {
   "name": "cordova-valley-installer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "It's a plugin for downloading and opening files.",
   "cordova": {
     "id": "cordova-valley-installer",
@@ -13,5 +13,13 @@
     "cordova-android"
   ],
   "author": "yinglight",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinglight/installer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yinglight/installer/issues"
+  },
+  "homepage": "https://github.com/yinglight/installer#readme"
 }
