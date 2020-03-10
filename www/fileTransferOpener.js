@@ -1,7 +1,7 @@
 var cordova = require('cordova');
 
 var InstallAPK = {
-    install: function (fileUrl, success, error) {
+    install: function (fileUrl, error, success) {
         cordova.exec(success, error, 'FileTransferOpener', 'install', [fileUrl]);
     }
 };
