@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-valley-installer" version="0.0.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Intaller</name>
+    <js-module name="InstallAPK" src="www/fileTransferOpener.js">
+        <clobbers target="InstallAPK"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="FileTransferOpener">
+                <param name="android-package" value="org.lit.filetool.FileTransferOpener" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="application">
+          <provider android:name="org.lit.filetool.FileProvider" android:authorities="${applicationId}.provider" android:exported="false" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/opener_path" />
+          </provider>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/FileTransferOpener.java" target-dir="src/org/lit/filetool" />
+        <source-file src="src/android/FileProvider.java" target-dir="src/org/lit/filetool"/>
+        <source-file src="src/android/SecurityUtil.java" target-dir="src/org/lit/filetool"/>
+        <source-file src="src/android/res/xml/opener_path.xml" target-dir="res/xml" />
+        <preference name="ANDROID_SUPPORT_V4_VERSION" default="27.+"/>
+        <framework src="com.android.support:support-v4:$ANDROID_SUPPORT_V4_VERSION"/>
+    </platform>
+</plugin>

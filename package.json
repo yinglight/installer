@@ -1,0 +1,17 @@
+{
+  "name": "cordova-valley-installer",
+  "version": "0.0.0",
+  "description": "It's a plugin for downloading and opening files.",
+  "cordova": {
+    "id": "cordova-valley-installer",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "yinglight",
+  "license": "ISC"
+}
