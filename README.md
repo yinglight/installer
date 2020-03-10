@@ -8,6 +8,6 @@ cordova plugin add cordova-valley-installer
 #### js/ionic使用方法
 
 ```
-(<any>window).installAPK.install("fileUrl", errorCallback, successCallback);
-window.installAPK.install("fileUrl", errorCallback, successCallback);
+(<any>window).InstallAPK.install("fileUrl", errorCallback, successCallback);
+window.InstallAPK.install("fileUrl", errorCallback, successCallback);
 ```
